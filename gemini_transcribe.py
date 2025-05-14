@@ -28,11 +28,13 @@ myfile = client.files.upload(file=args.input_file)
 print("Transcribing the audio...")
 
 prompt = (
-    "Transcribe this audio clip into Japanese. Identify different speakers and format the transcript accordingly. "
-    "Each speaker's dialogue should be separated into distinct paragraphs with line breaks between turns. "
-    "Do not summarize—transcribe as faithfully as possible. "
-    "If possible, label each speaker as 'Speaker 1', 'Speaker 2', etc."
-    "Important: Do not insert any extra spaces between Japanese words. The output should be written in natural Japanese, as it would appear in a book or article. No unnecessary spacing."
+    "Please transcribe the following Japanese audio clip."
+    "Write the transcript entirely in Japanese."
+    "Clearly separate each speaker's dialogue into paragraphs."
+    "Insert line breaks when the speaker changes."
+    "Label each speaker if possible (e.g., 'Speaker 1:', 'Speaker 2:')."
+    "Do not summarize. Transcribe all speech as faithfully as possible."
+    "Important: Do not insert spaces between Japanese words. The output should be formatted as natural Japanese text, as seen in books or articles."
 )
 
 response = client.models.generate_content(
