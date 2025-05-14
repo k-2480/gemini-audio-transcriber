@@ -40,6 +40,6 @@ response = client.models.generate_content(
 )
 
 with open(args.output_file, "w", encoding="utf-8") as file:
-    file.write(response.text)
+    file.write(response.text.replace(' ', ''))
 
 print(f"Done. Transcribed file saved as '{args.output_file}'")
