@@ -32,6 +32,7 @@ prompt = (
     "Each speaker's dialogue should be separated into distinct paragraphs with line breaks between turns. "
     "Do not summarize—transcribe as faithfully as possible. "
     "If possible, label each speaker as 'Speaker 1', 'Speaker 2', etc."
+    "Important: Do not insert any extra spaces between Japanese words. The output should be written in natural Japanese, as it would appear in a book or article. No unnecessary spacing."
 )
 
 response = client.models.generate_content(
